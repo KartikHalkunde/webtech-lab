@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Tags</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🌐 HTML Tags</h1>
+    <p>A single page showing the most commonly used <strong>HTML tags</strong>.</p>
+    <nav>
+      <a href="#text">Text</a> |
+      <a href="#media">Media</a> |
+      <a href="#lists">Lists</a> |
+      <a href="#table">Table</a> |
+      <a href="#form">Form</a> |
+      <a href="#semantic">Semantic</a>
+    </nav>
+    <hr>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- TEXT TAGS -->
+    <section id="text">
+      <h2>📝 Text & Formatting</h2>
+
+      <p>
+        This is a <strong>paragraph</strong> with
+        <em>emphasis</em>,
+        <b>bold</b>,
+        <i>italic</i>,
+        <u>underline</u>,
+        <mark>highlighted text</mark>,
+        <small>small text</small>,
+        <del>deleted text</del>,
+        <ins>inserted text</ins>,
+        <sub>sub</sub> and <sup>sup</sup>.
+      </p>
+
+      <blockquote>
+        “HTML is the skeleton of the web.”
+      </blockquote>
+
+      <pre>
+&lt;pre&gt; keeps formatting
+    exactly as typed
+      including spaces
+      </pre>
+
+      <code>&lt;code&gt;HTML code snippet&lt;/code&gt;</code>
+      <br><br>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media">
+      <h2>🎬 Media</h2>
+
+      <figure>
+        <img src="https://via.placeholder.com/300" alt="Placeholder image">
+        <figcaption>Image using &lt;img&gt; and &lt;figure&gt;</figcaption>
+      </figure>
+
+      <video controls width="300">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <br><br>
+
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+    </section>
+
+    <!-- LISTS -->
+    <section id="lists">
+      <h2>📋 Lists</h2>
+
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Structure</li>
+        <li>Style</li>
+        <li>Behavior</li>
+      </ol>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Markup language</dd>
+        <dt>CSS</dt>
+        <dd>Styling language</dd>
+      </dl>
+    </section>
+
+    <!-- TABLE -->
+    <section id="table">
+      <h2>📊 Table</h2>
+
+      <table border="1">
+        <caption>Popular Web Languages</caption>
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Markup</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Style</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Programming</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORM -->
+    <section id="form">
+      <h2>🧾 Form Elements</h2>
+
+      <form>
+        <label>
+          Name:
+          <input type="text" placeholder="Your name">
+        </label>
+        <br><br>
+
+        <label>
+          Email:
+          <input type="email" placeholder="email@example.com">
+        </label>
+        <br><br>
+
+        <label>
+          Password:
+          <input type="password">
+        </label>
+        <br><br>
+
+        <label>
+          Favorite Language:
+          <select>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+          </select>
+        </label>
+        <br><br>
+
+        <label>
+          <input type="checkbox"> Subscribe
+        </label>
+        <br>
+
+        <label>
+          <input type="radio" name="level"> Beginner
+        </label>
+        <label>
+          <input type="radio" name="level"> Advanced
+        </label>
+        <br><br>
+
+        <textarea rows="4" cols="30">Write something...</textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- SEMANTIC & MISC -->
+    <section id="semantic">
+      <h2>🧩 Semantic & Misc</h2>
+
+      <details>
+        <summary>Click to expand</summary>
+        <p>This uses &lt;details&gt; and &lt;summary&gt;</p>
+      </details>
+
+      <progress value="70" max="100"></progress>
+      <meter value="0.6">60%</meter>
+
+      <p>
+        Time tag:
+        <time datetime="2026-01-20">January 20, 2026</time>
+      </p>
+
+      <abbr title="HyperText Markup Language">HTML</abbr>
+
+      <address>
+        Written by You<br>
+        On the Internet 🌍
+      </address>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <hr>
+    <p>© 2026 HTML Tag Showcase</p>
+  </footer>
+
+</body>
+</html>
