@@ -1,225 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML Tags</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Paradise - The Ultimate Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #c62828;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Pizza Paradise</h1>
+        <p><em>"Where every slice is a piece of heaven"</em></p>
+    </header>
 
-  <!-- HEADER -->
-  <header>
-    <h1>🌐 HTML Tags</h1>
-    <p>A single page showing the most commonly used <strong>HTML tags</strong>.</p>
     <nav>
-      <a href="#text">Text</a> |
-      <a href="#media">Media</a> |
-      <a href="#lists">Lists</a> |
-      <a href="#table">Table</a> |
-      <a href="#form">Form</a> |
-      <a href="#semantic">Semantic</a>
+        <a href="#about">About Pizza</a>
+        <a href="#types">Pizza Types</a>
+        <a href="#toppings">Toppings</a>
+        <a href="#order">Order Now</a>
     </nav>
-    <hr>
-  </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
+    <main>
+        <section id="about">
+            <h2>About Pizza</h2>
+            <p>Pizza is a <strong>delicious</strong> Italian dish consisting of a round, flat base of dough topped with tomato sauce, cheese, and various toppings!</p>
+            
+            <h3>Pizza Facts</h3>
+            <ul>
+                <li>Origin: Naples, Italy</li>
+                <li>Most popular food worldwide</li>
+                <li>Over 5 billion pizzas sold annually</li>
+                <li>October is National Pizza Month</li>
+            </ul>
 
-    <!-- TEXT TAGS -->
-    <section id="text">
-      <h2>📝 Text & Formatting</h2>
+            <blockquote>
+                <p>"You can't make everyone happy. You're not pizza."</p>
+                <cite>- Unknown Pizza Lover</cite>
+            </blockquote>
+        </section>
 
-      <p>
-        This is a <strong>paragraph</strong> with
-        <em>emphasis</em>,
-        <b>bold</b>,
-        <i>italic</i>,
-        <u>underline</u>,
-        <mark>highlighted text</mark>,
-        <small>small text</small>,
-        <del>deleted text</del>,
-        <ins>inserted text</ins>,
-        <sub>sub</sub> and <sup>sup</sup>.
-      </p>
+        <section id="types">
+            <h2>Popular Pizza Styles</h2>
+            <dl>
+                <dt><strong>Neapolitan Pizza</strong></dt>
+                <dd>Traditional Italian pizza with thin crust, fresh mozzarella, and simple toppings</dd>
+                
+                <dt><strong>New York Style</strong></dt>
+                <dd>Large, wide slices with a thin, foldable crust</dd>
+                
+                <dt><strong>Chicago Deep Dish</strong></dt>
+                <dd>Thick, pie-like pizza with layers of cheese and chunky tomato sauce</dd>
+            </dl>
 
-      <blockquote>
-        “HTML is the skeleton of the web.”
-      </blockquote>
+            <h3>Best Pizza Cities Ranked</h3>
+            <ol>
+                <li>Naples, Italy</li>
+                <li>New York City, USA</li>
+                <li>Chicago, USA</li>
+                <li>Rome, Italy</li>
+            </ol>
+        </section>
 
-      <pre>
-&lt;pre&gt; keeps formatting
-    exactly as typed
-      including spaces
-      </pre>
+        <section id="toppings">
+            <h2>Popular Toppings</h2>
+            <table border="1" cellpadding="10" cellspacing="0" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Topping</th>
+                        <th>Popularity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pepperoni</td>
+                        <td><small>★★★★★</small></td>
+                    </tr>
+                    <tr>
+                        <td>Mushrooms</td>
+                        <td><small>★★★★☆</small></td>
+                    </tr>
+                    <tr>
+                        <td>Extra Cheese</td>
+                        <td><small>★★★★★</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-      <code>&lt;code&gt;HTML code snippet&lt;/code&gt;</code>
-      <br><br>
-    </section>
+        <section id="order">
+            <h2>Order Your Pizza</h2>
+            <form>
+                <fieldset>
+                    <legend>Customize Your Order</legend>
+                    
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="size">Pizza Size:</label><br>
+                    <select id="size" name="size">
+                        <option value="small">Small (10")</option>
+                        <option value="medium">Medium (12")</option>
+                        <option value="large">Large (14")</option>
+                        <option value="xlarge">X-Large (16")</option>
+                    </select><br><br>
+                    
+                    <label>Crust Type:</label><br>
+                    <input type="radio" id="thin" name="crust" value="thin">
+                    <label for="thin">Thin Crust</label><br>
+                    <input type="radio" id="regular" name="crust" value="regular">
+                    <label for="regular">Regular</label><br>
+                    <input type="radio" id="thick" name="crust" value="thick">
+                    <label for="thick">Thick Crust</label><br><br>
+                    
+                    <input type="checkbox" id="pepperoni" name="pepperoni">
+                    <label for="pepperoni">Add Pepperoni</label><br>
+                    <input type="checkbox" id="mushrooms" name="mushrooms">
+                    <label for="mushrooms">Add Mushrooms</label><br>
+                    <input type="checkbox" id="olives" name="olives">
+                    <label for="olives">Add Olives</label><br><br>
+                    
+                    <label for="instructions">Special Instructions:</label><br>
+                    <textarea id="instructions" name="instructions" rows="4" cols="50" placeholder="Any special requests?"></textarea><br><br>
+                    
+                    <button type="submit">Place Order</button>
+                    <button type="reset">Clear</button>
+                </fieldset>
+            </form>
+        </section>
 
-    <!-- MEDIA -->
-    <section id="media">
-      <h2>🎬 Media</h2>
+        <aside style="background-color: #fffacd; padding: 15px; margin: 20px 0;">
+            <h4>Pizza Fun Fact!</h4>
+            <p><mark>The world's largest pizza</mark> was over 13,000 square feet and made in Rome!</p>
+        </aside>
 
-      <figure>
-        <img src="https://via.placeholder.com/300" alt="Placeholder image">
-        <figcaption>Image using &lt;img&gt; and &lt;figure&gt;</figcaption>
-      </figure>
+        <details>
+            <summary>Click for Pizza Recipe Tip</summary>
+            <p>For the perfect crust, let your dough rest at room temperature for at least 2 hours before baking!</p>
+        </details>
 
-      <video controls width="300">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support video.
-      </video>
+        <hr>
 
-      <br><br>
+        <figure style="text-align: center;">
+            <figcaption>Tip: Press <kbd>Ctrl+P</kbd> to print our menu</figcaption>
+        </figure>
 
-      <audio controls>
-        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-        Your browser does not support audio.
-      </audio>
-    </section>
+        <p>Member of: <abbr title="International Pizza Association">IPA</abbr></p>
+        
+        <p>Pizza temperature: 450°F or 232°C (that's 232<sup>o</sup>C)</p>
+        <p>Slice ratio: 1 pizza = 8<sub>slices</sub></p>
+        
+        <pre>
+ASCII Pizza:
+    ___
+   /   \
+  | o o |
+  |  ^  |
+   \___/
+  "Delicious!"
+        </pre>
 
-    <!-- LISTS -->
-    <section id="lists">
-      <h2>📋 Lists</h2>
+        <p><del>Pineapple doesn't belong on pizza</del> <ins>Everyone has their own taste!</ins></p>
 
-      <h3>Unordered List</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
+        <p>Pizza ordering code: <code>order.add("cheese").add("pepperoni");</code></p>
 
-      <h3>Ordered List</h3>
-      <ol>
-        <li>Structure</li>
-        <li>Style</li>
-        <li>Behavior</li>
-      </ol>
+        <p>Find us on: <a href="#" target="_blank">Pizza Lovers United</a></p>
+        
+        <p>Delivery available in: <small>New York, Chicago, Los Angeles, Miami</small></p>
+    </main>
 
-      <h3>Description List</h3>
-      <dl>
-        <dt>HTML</dt>
-        <dd>Markup language</dd>
-        <dt>CSS</dt>
-        <dd>Styling language</dd>
-      </dl>
-    </section>
-
-    <!-- TABLE -->
-    <section id="table">
-      <h2>📊 Table</h2>
-
-      <table border="1">
-        <caption>Popular Web Languages</caption>
-        <thead>
-          <tr>
-            <th>Language</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML</td>
-            <td>Markup</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>Style</td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td>Programming</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- FORM -->
-    <section id="form">
-      <h2>🧾 Form Elements</h2>
-
-      <form>
-        <label>
-          Name:
-          <input type="text" placeholder="Your name">
-        </label>
-        <br><br>
-
-        <label>
-          Email:
-          <input type="email" placeholder="email@example.com">
-        </label>
-        <br><br>
-
-        <label>
-          Password:
-          <input type="password">
-        </label>
-        <br><br>
-
-        <label>
-          Favorite Language:
-          <select>
-            <option>HTML</option>
-            <option>CSS</option>
-            <option>JavaScript</option>
-          </select>
-        </label>
-        <br><br>
-
-        <label>
-          <input type="checkbox"> Subscribe
-        </label>
-        <br>
-
-        <label>
-          <input type="radio" name="level"> Beginner
-        </label>
-        <label>
-          <input type="radio" name="level"> Advanced
-        </label>
-        <br><br>
-
-        <textarea rows="4" cols="30">Write something...</textarea>
-        <br><br>
-
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <!-- SEMANTIC & MISC -->
-    <section id="semantic">
-      <h2>🧩 Semantic & Misc</h2>
-
-      <details>
-        <summary>Click to expand</summary>
-        <p>This uses &lt;details&gt; and &lt;summary&gt;</p>
-      </details>
-
-      <progress value="70" max="100"></progress>
-      <meter value="0.6">60%</meter>
-
-      <p>
-        Time tag:
-        <time datetime="2026-01-20">January 20, 2026</time>
-      </p>
-
-      <abbr title="HyperText Markup Language">HTML</abbr>
-
-      <address>
-        Written by You<br>
-        On the Internet 🌍
-      </address>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <hr>
-    <p>© 2026 HTML Tag Showcase</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2024 Pizza Paradise | <a href="mailto:info@pizzaparadise.com" style="color: #66b3ff;">Contact Us</a></p>
+        <address>
+            123 Cheese Street<br>
+            Pizzaville, PZ 12345
+        </address>
+    </footer>
 </body>
 </html>
