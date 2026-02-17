@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f5e1c0;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 3rem;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.album-box {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.album-box:hover {
+    transform: scale(1.02);
+}
+
+.album-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.album-box:hover img {
+    filter: brightness(0.4);
+}
+
+.album-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.album-box:hover .album-overlay {
+    opacity: 1;
+}
+
+.album-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* Bio Section Styling */
+.bio-section {
+    margin: 4rem auto;
+    padding: 10rem 5%;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://imgs.search.brave.com/loMlZbZ3dyS9ZSQR2eI16mAmqXDPEHSEflMX70NAiJk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvODIx/OTc2Ni5qcGc');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This makes the image stay fixed while the content scrolls */
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.bio-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.bio-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.bio-content p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.bio-content em {
+    color: #f5e1c0;
+    font-style: italic;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: #000;
+    margin-top: 4rem;
+    color: #666;
+}
+
+/* Album Details Page */
+.detail-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 5%;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.detail-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.detail-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.detail-info .year {
+    font-size: 1.2rem;
+    color: #f5e1c0;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.detail-info .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #f5e1c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
