@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pulse Quiz Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Interactive Knowledge System</p>
+        <h1>Pulse Quiz Lab</h1>
+        <p class="subhead">
+          A fast, cinematic quiz experience with adaptive difficulty, smart hints,
+          and instant feedback.
+        </p>
+        <div class="hero-actions">
+          <button id="start-btn" class="primary">Start Session</button>
+          <button id="review-btn" class="ghost" disabled>Review Answers</button>
+        </div>
+        <div class="stats">
+          <div>
+            <span id="stat-total">0</span>
+            <small>Questions</small>
+          </div>
+          <div>
+            <span id="stat-time">00:00</span>
+            <small>Elapsed</small>
+          </div>
+          <div>
+            <span id="stat-streak">0</span>
+            <small>Top Streak</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel" id="quiz-panel" aria-live="polite">
+        <div class="panel-header">
+          <div>
+            <p class="panel-label">Live Session</p>
+            <h2 id="question-title">Ready when you are</h2>
+            <p id="question-meta">Click start to load your first mission.</p>
+          </div>
+          <div class="pill" id="difficulty-pill">Warm-up</div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="progress-text" id="progress-text">0 / 0</div>
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <div class="panel-actions">
+          <button id="hint-btn" class="ghost" disabled>Hint</button>
+          <div class="action-right">
+            <button id="skip-btn" class="ghost" disabled>Skip</button>
+            <button id="next-btn" class="primary" disabled>Next</button>
+          </div>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+      </section>
+
+      <aside class="panel side" id="summary-panel">
+        <div class="panel-header">
+          <div>
+            <p class="panel-label">Performance</p>
+            <h2>Session Summary</h2>
+            <p class="panel-caption">Track accuracy, timing, and mastery.</p>
+          </div>
+        </div>
+
+        <div class="score-ring">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" class="ring-bg"></circle>
+            <circle cx="60" cy="60" r="52" class="ring-progress" id="ring-progress"></circle>
+          </svg>
+          <div class="ring-value" id="score-percentage">0%</div>
+          <p class="ring-label">Accuracy</p>
+        </div>
+
+        <div class="summary-grid">
+          <div>
+            <h3 id="correct-count">0</h3>
+            <p>Correct</p>
+          </div>
+          <div>
+            <h3 id="incorrect-count">0</h3>
+            <p>Incorrect</p>
+          </div>
+          <div>
+            <h3 id="skipped-count">0</h3>
+            <p>Skipped</p>
+          </div>
+          <div>
+            <h3 id="avg-time">0s</h3>
+            <p>Avg Time</p>
+          </div>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+      </aside>
+    </main>
+
+    <section class="panel review" id="review-panel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-label">Review</p>
+          <h2>Answer Insights</h2>
+          <p class="panel-caption">Revisit each question and see the reasoning.</p>
+        </div>
+      </div>
+      <div id="review-list" class="review-list"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
